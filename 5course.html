@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <!-- Favicon halaman menggunakan logo UCIC -->
+    <link rel="shortcut icon" href="UCIC L.png">
+     <!-- Link ke file CSS utama untuk styling halaman -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link ke pustaka ikon Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link ke pustaka ikon Font Awesome -->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <!-- Preconnect untuk font Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Link ke font Open Sans dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+    <!-- Link tambahan ke Boxicons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <!-- Bagian home dengan gambar latar dan header -->
+    <img class="image-gradient" src="gradient.png" alt="gradient">
+    <div class="layer-blur"></div>
+    <div class="container">
+        <header>
+            <!-- Logo halaman -->
+            <a href="#" class="logo"><img src="LOGO.png" alt=""></a>
+            <ul class="navlsit">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="course.html" class="active">COURSES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <!-- Bagian kanan header dengan tombol login dan ikon menu -->
+            <div class="right">
+                <a href="login.html" class="btn">LOG IN</a>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+        </header>
+    <!-- Section utama untuk konten kursus detail -->
+        <main>
+            <section id="course-inner">
+                <!-- Div untuk overview kursus, berisi gambar, judul, rating, pengajar, dll. -->
+                <div class="overview">
+                    <!-- Gambar kursus HTML -->
+                    <img class="course-img" src="Node.webp" alt="">
+                    <div class="course-head">
+                        <div class="c-name">
+                            <!-- Judul kursus dengan rating bintang -->
+                            <h2>Node.js®</h2>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <!-- Deskripsi singkat tentang pengajar -->
+                            <p>Dididik oleh tenaga pengajar yang berkualitas dan menguasai bidang keahliannya secara komprehensif.</p>
+                        </div>
+                        <!-- Elemen span untuk rating atau label -->
+                        <span>B</span>
+                    </div>
+                    <!-- Judul untuk bagian pengajar -->
+                    <h3>Pengajar</h3>
+                    <div class="tutor">
+                        <!-- Gambar pengajar -->
+                        <img src="pa_bambang_s.jpg" alt="">
+                        <div class="tutor-det">
+                            <!-- Nama dan jabatan pengajar -->
+                            <h5>Bambang Sugiarto,S.Kom.,M.Kom.</h5>
+                            <p>Dosen Pemrograman Internet</p>
+                        </div>
+                    </div>
+                    <!-- Garis pemisah -->
+                    <hr>
+                    <!-- Judul untuk penjelasan ringkas -->
+                    <h3>Penjelasan Ringkas</h3>
+                    <!-- Paragraf penjelasan tentang HTML -->
+                    <p>Node.js adalah lingkungan runtime yang memungkinkan JavaScript dijalankan di sisi server (server-side), bukan hanya di browser. Ini memungkinkan developer menggunakan JavaScript untuk membangun aplikasi backend yang skalabel dan cepat.</p>
+                    <!-- Garis pemisah -->
+                    <hr>
+                    <!-- Judul untuk yang dipelajari -->
+                    <h3>Yang Dipelajari</h3>
+                    <div class="learn">
+                        <!-- Daftar poin-poin yang dipelajari dengan ikon check -->
+                        <p><i class="far fa-check-circle"></i>Runtime Environment</p>
+                        <p><i class="far fa-check-circle"></i>Package Management</p>
+                        <p><i class="far fa-check-circle"></i>Membangun Server Web</p>
+                        <p><i class="far fa-check-circle"></i>Routing & Middleware</p>
+                        <p><i class="far fa-check-circle"></i>Koneksi Database</p>
+                    </div>
+                    <!--sertifikat-->
+                    <div class="button">
+                        <a href="Sertifikat.png" download="sertifikat" class="anchor">
+                            <span>Download Sertifikat</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Div untuk bagian enroll, berisi fitur kursus dan tombol daftar -->
+                <div class="enroll">
+                    <!-- Judul untuk kursus ini termasuk -->
+                    <h3>Kursus Ini Termasuk</h3>
+                    <!-- Daftar fitur kursus dengan ikon -->
+                    <p><i class='bx bx-video'></i>Video berdurasi 52 jam</p>
+                    <p><i class='bx bx-news'></i>75 Artikel</p>
+                    <p><i class='bx bx-cloud-download'></i>Dapat diunduh</p>
+                    <p><i class='bx bx-infinite'></i>Akses penuh seumur hidup</p>
+                    <p><i class='bx bxs-devices' ></i>Akses di ponsel dan tablet</p>
+                    <p><i class='bx bx-paperclip'></i>Penugasan</p>
+                    <p><i class='bx bx-trophy'></i>Sertifikat penyelesaian</p>
+                    <div class="enroll-btn">
+                        <!-- Tombol untuk daftar kursus -->
+                        <a class="blue" href="WEB_UIKITS.html">Daftar Kursus</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Section footer dengan informasi kampus dan link -->
+    <section class="footer">
+        <!-- Kolom pertama: logo, copyright, dan ikon sosial media -->
+        <div class="sec-1">
+            <img src="footer logo.png" alt="">
+            <p>Copyright &copy; 2025 rights reserved | made by Muhammad Arif Triyana</p>
+            
+            <div class="footer-icon">
+                <a href="https://www.facebook.com/share/19rVrFvkq7/"><i class='bx bxl-facebook-square'></i></box-icon></a>
+                <a href="https://www.instagram.com/universitas_cic?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="active"><i class='bx bxl-instagram-alt'></i></box-icon></a>
+                <a href="https://www.linkedin.com/company/universitas-catur-insan-cendekia/"><i class='bx bxl-linkedin-square' ></i></a>
+                <a href="https://youtube.com/@universitascic?si=lBykQgbTBBMNSChj"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+        <!-- Kolom kedua: aplikasi kampus -->
+        <div class="sec-2">
+            <h4><i class='bx bxs-graduation'></i>Campus Aplication</h4>
+            <li><a href="https://my.cic.ac.id/portal/mahasiswa/">Student Academic System (MyCIC)</a></li>
+            <hr>
+            <li><a href="https://simantu.cic.ac.id/">Quality Management System (SiMANTU UCIC)</a></li>
+            <hr>
+            <li><a href="https://pustaka.cic.ac.id/">CIC Library (E-Library)</a></li>
+            <hr>
+            <li><a href="https://ebook.cic.ac.id/">UCIC eBook Repository System (MYeBook)</a></li>
+        </div>
+        <!-- Kolom ketiga: link terkait -->
+        <div class="sec-3">
+            <h4><i class='bx bx-link'></i>Related Links</h4>
+            <li><a href="https://jad.lldikti4.id/login">Academic Position Information System for Lecturers at LLDikti Refion IV</a></li>
+            <hr>
+            <li><a href="https://lldikti4.kemdiktisaintek.go.id/">LLDIKTI Region IV - Level IV Educational Service Institution</a></li>
+            <hr>
+            <li><a href="https://pddikti.kemdiktisaintek.go.id/">Forlap Dikti</a></li>
+        </div>
+        <!-- Kolom keempat: kontak -->
+        <div class="sec-4">
+            <h4><i class='bx bxs-contact'></i>Contact Us</h4>
+            <li><a href="https://maps.app.goo.gl/9D4EB6RDjRS6iW31A?g_st=aw">Jl. Kesambi No. 202, Drajat, Kesambi, Cirebon City, West Java 45133</a></li>
+            <hr>
+            <li><a href="#">Telephone: +62 231-200418</li>
+            <hr>
+            <li><a href="https://api.whatsapp.com/send/?phone=6281216700519&text=Halo+kak%2C+saya+ingin+bertanya+tanya+berkaitan+dengan+UCIC&type=phone_number&app_absent=0">PMB Info: +6289512314188</a></li>
+            <hr>
+            <li><a href="#">Email: info@cic.ac.id</a></li>
+        </div>
+    </section>
+    <!-- Script JavaScript untuk interaktivitas halaman -->
+    <script src="java.js"></script>
+</body>
+</html>

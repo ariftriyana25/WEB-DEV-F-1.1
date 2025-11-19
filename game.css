@@ -1,0 +1,47 @@
+/* Mengatur background body dengan gambar land.png dari folder assets */
+body{
+    background-image: url("assets/land.png");
+}
+/* Mengatur elemen player dengan lebar 80px, tinggi 100px, background gambar player_front.png, dll. */
+.player{
+    width: 80px;
+    height: 100px;
+    background-image: url("assets/player_front.png");
+    background-size: 240px 100px;
+    background-position: -80px 0px;
+    position: fixed;
+    z-index: 999;
+}
+/* Mengatur animasi walk untuk player ketika class active ditambahkan */
+.player.active{
+    animation: .2s walk linear infinite;
+}
+/* Mendefinisikan keyframe animasi walk untuk efek berjalan */
+@keyframes walk{
+    0%, 32%{
+        background-position: 0 0;
+    }
+    33%, 65%{
+        background-position: -80px 0;
+    }
+    66%, 100%{
+        background-position: -160px 0;
+    }
+}
+/* Mengatur elemen bush dengan lebar 50px, tinggi 40px, background gambar bush.png, dll. */
+.bush{
+    width: 50px;
+    height: 40px;
+    background-image: url("assets/bush.png");
+    background-size: 100% 100%;
+    position: fixed;
+    z-index: -1;
+}
+/* Mengatur elemen pokeball dengan lebar 30px, tinggi 30px, background gambar pokeball.png, dll. */
+.pokeball{
+    width: 30px;
+    height: 30px;
+    background-image: url("assets/pokeball.png");
+    background-size: 100% 100%;
+    position: fixed;
+}

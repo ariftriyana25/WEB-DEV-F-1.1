@@ -1,0 +1,314 @@
+/* Mengimpor font Poppins dari Google Fonts dengan berbagai bobot untuk digunakan di seluruh halaman */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* Reset margin, padding, dan box-sizing untuk semua elemen, serta mengatur font-family default ke Poppins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* Mengatur body untuk menampilkan konten di tengah layar dengan tinggi minimum 100vh dan background gradien */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(63, 63, 63, 0.4), rgba(13, 13, 13, 0.7)), url("Quiz-bg.jpg");
+}
+/* Mengatur container utama dengan posisi relatif, ukuran tetap, background putih, border-radius, dan box-shadow */
+.container{
+    position: relative;
+    width: 850px;
+    height: 550px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    margin: 20px;
+    overflow: hidden;
+}
+/* Mengatur form-box dengan posisi absolut di kanan, lebar 50%, tinggi penuh, dan transisi untuk animasi */
+.form-box{
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #f8faff;
+    display: flex;
+    align-items: center;
+    color: #2b2b2b;
+    text-align: center;
+    padding: 40px;
+    z-index: 1;
+    transition: .6s ease-in-out 1.2s, visibility 0s 1s;
+}
+/* Ketika container aktif, geser form-box ke kiri (right: 50%) */
+.container.active .form-box{
+    right: 50%;
+}
+/* Sembunyikan form-box register secara default */
+.form-box.register{
+    visibility: hidden;
+}
+/* Tampilkan form-box register ketika container aktif */
+.container.active .form-box.register{
+    visibility: visible;
+}
+/* Mengatur form agar lebar penuh */
+form{
+    width: 100%;
+}
+/* Mengatur heading h1 di dalam container dengan ukuran font besar dan margin */
+.container h1{
+    font-size: 36px;
+    margin: -10px 0;
+    color: #1a2a6c;
+}
+/* Mengatur input-box dengan posisi relatif dan margin */
+.input-box{
+    position: relative;
+    margin: 30px 0;
+}
+/* Mengatur input di dalam input-box dengan padding, background, border-radius, dll. */
+.input-box input{
+    width: 100%;
+    padding: 13px 50px 13px 20px;
+    background: #eef3ff;
+    border-radius: 10px;
+    border: 2px solid #cfd8ff;
+    outline: none;
+    font-size: 16px;
+    color: #2b2b2b;
+    font-weight: 500;
+}
+.input-box input:focus {
+    border-color: #5b8def;
+    box-shadow: 0 0 6px rgba(91, 141, 239, 0.4);
+}
+/* Mengatur placeholder input dengan warna dan font-weight */
+.input-box input::placeholder{
+    color: #7a7a7a;
+    font-weight: 400;
+}
+/* Mengatur ikon di dalam input-box dengan posisi absolut */
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #8a9fff;
+}
+/* Mengatur forgot-link dengan margin */
+.forgot-link{
+    margin: -15px 0 15px;
+}
+/* Mengatur link di forgot-link dengan font-size, color, dan text-decoration */
+.forgot-link a{
+    font-size: 14.5px;
+    color: #4e6aff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.forgot-link a:hover {
+    text-decoration: underline;
+}
+/* Mengatur tombol btn dengan lebar penuh, tinggi, background, dll. */
+.btn{
+    width: 100%;
+    height: 48px;
+    background: linear-gradient(135deg, #4e6aff, #86b0ff);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(78, 106, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: linear-gradient(135deg, #5a7aff, #9ec5ff);
+}
+/* Mengatur paragraf di dalam container dengan font-size dan margin */
+.container p{
+    font-size: 14.5px;
+    margin: 15px 0;
+    color: #444;
+}
+/* Mengatur social-icons dengan display flex dan justify-content center */
+.social-icons{
+    display: flex;
+    justify-content: center;
+}
+/* Mengatur link di social-icons dengan padding, border, dll. */
+.social-icons a{
+    display: inline-flex;
+    padding: 10px;
+    border: 2px solid #cfd6ff;
+    border-radius: 8px;
+    font-size: 24px;
+    color: #4e6aff;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    background: #4e6aff;
+    color: #fff;
+    border-color: #5b8def;
+}
+/* Mengatur toggle-box dengan posisi absolut dan ukuran penuh */
+.toggle-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/* Mengatur heading h1 di toggle-box dengan warna putih dan text-shadow */
+.toggle-box h1{
+    color: #fffbea;
+    text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 2px;
+}
+/* Mengatur paragraf di toggle-box dengan warna putih dan text-shadow */
+.toggle-box p{
+    color: #fffbea;
+    text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 2px;
+}
+/* Mengatur tombol di toggle-box dengan warna putih dan text-shadow */
+.toggle-box button{
+    color: #fffbea;
+    text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 2px;
+}
+/* Membuat pseudo-element ::before untuk toggle-box dengan background biru dan transisi */
+.toggle-box::before{
+    content: '';
+    position: absolute;
+    left: -250%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(135deg, #4e6aff, #86b0ff);
+    border-radius: 150px;
+    z-index: 2;
+    transition: 1.8s ease-in-out;
+}
+/* Ketika container aktif, geser ::before ke kanan (left: 50%) */
+.container.active .toggle-box::before{
+    left: 50%;
+}
+/* Mengatur toggle-panel dengan posisi absolut, lebar 50%, dll. */
+.toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: .6s ease-in-out;
+}
+/* Mengatur toggle-panel toggle-left dengan posisi kiri dan transition-delay */
+.toggle-panel.toggle-left{
+    left: 0;
+    transition-delay: 1.2s;
+}
+/* Ketika container aktif, geser toggle-left ke kiri (left: -50%) dengan delay */
+.container.active .toggle-panel.toggle-left{
+    left: -50%;
+    transition-delay: .6s;
+}
+/* Mengatur toggle-panel toggle-right dengan posisi kanan dan transition-delay */
+.toggle-panel.toggle-right{
+    right: -50%;
+    transition-delay: .6s;
+}
+/* Ketika container aktif, geser toggle-right ke kanan (right: 0) dengan delay */
+.container.active .toggle-panel.toggle-right{
+    right: 0;
+    transition-delay: 1.2s;
+}
+/* Mengatur paragraf di toggle-panel dengan margin-bottom */
+.toggle-panel p{
+    margin-bottom: 20px;
+}
+/* Mengatur tombol btn di toggle-panel dengan ukuran, background transparan, dll. */
+.toggle-panel .btn{
+    width: 160px;
+    height: 46px;
+    background: transparent;
+    border: 2px solid #fffbea;
+    color: #fffbea;
+    box-shadow: none;
+    transition: 0.3s;
+
+}
+.toggle-panel .btn:hover {
+    background: #fffbea;
+    color: #2b3fff;
+}
+/* Media query untuk layar maksimal 650px (tablet/mobile) */
+@media screen and (max-width: 650px) {
+    /* Mengatur container dengan tinggi dinamis */
+    .container{
+        height: calc(100vh - 40px);
+    }
+    /* Mengatur form-box untuk posisi bawah, lebar penuh, tinggi 70% */
+    .form-box{
+        bottom: 0;
+        width: 100%;
+        height: 70%;
+    }
+     /* Ketika container aktif, geser form-box ke atas (bottom: 30%) */
+    .container.active .form-box{
+        right: 0;
+        bottom: 30%;
+    }
+     /* Mengatur ::before untuk posisi atas, lebar penuh, dll. */
+    .toggle-box::before{
+        left: 0;
+        top: -270%;
+        width: 100%;
+        height: 300%;
+        border-radius: 20vw;
+    }
+    /* Ketika container aktif, geser ::before ke bawah (top: 70%) */
+    .container.active .toggle-box::before{
+        left: 0;
+        top: 70%;
+    }
+    /* Mengatur toggle-panel dengan lebar penuh, tinggi 30% */
+    .toggle-panel{
+        width: 100%;
+        height: 30%;
+    }
+     /* Mengatur toggle-left untuk posisi atas */
+    .toggle-panel.toggle-left{
+        top: 0;
+    }
+    /* Ketika container aktif, geser toggle-left ke atas (top: -30%) */
+    .container.active .toggle-panel.toggle-left{
+        left: 0;
+        top: -30%;
+    }
+    /* Mengatur toggle-right untuk posisi bawah */
+    .toggle-panel.toggle-right{
+        right: 0;
+        bottom: -30%;
+    }
+    /* Ketika container aktif, geser toggle-right ke bawah (bottom: 0) */
+    .container.active .toggle-panel.toggle-right{
+        bottom: 0;
+
+    }
+}
+/* Media query untuk layar maksimal 400px (mobile kecil) */
+@media screen and (max-width: 400px){
+    /* Mengurangi padding form-box */
+    .form-box{
+        padding: 20px;
+    }
+    /* Mengurangi font-size heading di toggle-panel */
+    .toggle-panel h1{
+        font-size: 30px;
+    }
+}

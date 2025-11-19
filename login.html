@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="UCIC L.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- Kontainer utama untuk seluruh halaman login/registrasi -->
+    <div class="container">
+        <!-- Form box untuk halaman login -->
+        <div class="form-box login">
+            <form action="">
+                <h1>Login</h1>
+                <!-- Input box untuk username dengan ikon user -->
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                 <!-- Input box untuk password dengan ikon kunci -->
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <!-- Link untuk lupa password -->
+                <div class="forgot-link">
+                    <a href="https://www.google.com.nf/webhp?hl=en&tab=ii&zx=1760429155134&no_sw_cr=1">Lupa kata sandi?</a>
+                </div>
+                <!-- Tombol submit untuk login -->
+                <button type="submit" class="btn">Login</button>
+                <!-- Teks untuk opsi login dengan platform sosial -->
+                <p>atau masuk dengan platform sosial</p>
+                <!-- Ikon sosial media untuk login alternatif -->
+                <div class="social-icons">
+                    <a href="https://www.google.com.nf/webhp?hl=en&tab=ii&zx=1760429155134&no_sw_cr=1"><i class='bx bxl-google'></i></a>
+                    <a href="https://web.facebook.com/login.php?_rdc=1&_rdr#"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://github.com/login"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/uas/login"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </form>
+        </div>
+        <!-- Form box untuk halaman registrasi -->
+        <div class="form-box register">
+            <form action="">
+                <h1>Registration</h1>
+                <!-- Input box untuk username dengan ikon user -->
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <!-- Input box untuk email dengan ikon envelope -->
+                <div class="input-box">
+                    <input type="email" placeholder="Email" required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <!-- Input box untuk password dengan ikon kunci -->
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <!-- Tombol submit untuk registrasi -->
+                <button type="submit" class="btn">Register</button>
+                <!-- Teks untuk opsi registrasi dengan platform sosial -->
+                <p>atau masuk dengan platform sosial</p>
+                <!-- Ikon sosial media untuk registrasi alternatif -->
+                <div class="social-icons">
+                    <a href="https://www.google.com.nf/webhp?hl=en&tab=ii&zx=1760429155134&no_sw_cr=1"><i class='bx bxl-google'></i></a>
+                    <a href="https://web.facebook.com/login.php?_rdc=1&_rdr#"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://github.com/login"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/uas/login"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </form>
+        </div>
+        <!-- Toggle box untuk beralih antara login dan registrasi -->
+        <div class="toggle-box">
+            <!-- Panel toggle untuk sisi kiri (mendorong ke registrasi) -->
+            <div class="toggle-panel toggle-left">
+                <h1>Hello, Welcome!<i class='bx bxl-postgresql'></i></i></h1>
+                <p>Belum punya akun?</p>
+                <button class="btn register-btn">Register</button>
+            </div>
+            <!-- Panel toggle untuk sisi kanan (mendorong ke login) -->
+            <div class="toggle-panel toggle-right">
+                <h1>Welcome Back!<i class='bx bxl-javascript'></i></h1>
+                <p>Sudah punya akun?</p>
+                <button class="btn login-btn">Login</button>
+            </div>
+        </div>
+    </div>
+    <!-- Script JavaScript untuk interaktivitas halaman -->
+    <script src="login.js"></script>
+</body>
+
+</html>

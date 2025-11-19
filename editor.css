@@ -1,0 +1,293 @@
+:root{
+  /* Variabel warna dan ukuran global */
+    --bg:#050810;
+    --body-bg: #0a1120;
+    --panel:#10172a;
+    --muted:#8b9bb5;
+    --txt:#e3e8f4;
+    --brand:#1e3a8a;
+    --brand-2:#2f5a9f;
+    --ok: #1a6281;
+    --warn: #facc15;
+    --err:#ef4444;
+    --radius:18px; 
+    --gap:14px;
+}
+ 
+/* Reset dan dasar layout */
+*{
+    box-sizing:border-box;
+}
+
+
+html, body{
+    height: 100%;
+}
+
+
+body{
+  font-family: sans-serif; 
+  background:linear-gradient(180deg, var(--body-bg), var(--bg) 35%); 
+  color: var(--txt);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Header dengan efek blur dan gradient */
+header{
+  padding: 20px;
+  background:linear-gradient(90deg, rgba(96,165,250,.15), rgba(125,211,252,.1)); 
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  backdrop-filter: blur(6px);
+}
+
+/* Pengaturan lebar konten utama */
+.container{
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 14px;
+    justify-content: space-between;
+}
+
+/* Tampilan logo dan teks judul */
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    font-weight: 700;
+    color: var(--brand-2);
+}
+
+
+.brand .logo img{
+  max-width: 100%;
+  width: 180px;
+  height: auto;
+}
+
+
+/* Judul utama */
+.title{
+    font-size: clamp(18px, 2vw, 22px);
+    color: var(--txt);
+}
+
+
+/* Layout utama: 3 kolom */
+main{
+    max-width: 1516px;
+    margin-inline: auto;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: 280px 1fr 360px;
+    gap: var(--gap);
+}
+
+
+/* Responsif: jadi 1 kolom di layar kecil */
+@media (max-width: 1100px){
+     main{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Kartu panel transparan dengan blur */
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03)); 
+  border: 1px solid rgba(255,255,255,.15); 
+  border-radius:var(--radius); 
+  box-shadow: 0 10px 30px rgba(0,0,0,.05);
+  backdrop-filter: blur(6px);
+}
+
+/* Padding isi panel */
+.panel{
+    padding:16px
+}
+
+/* Judul dan subjudul */
+h2, h3{
+    margin:0 0 12px;
+    color: var(--txt);
+    text-shadow: 0 0 10px rgba(59,130,245,0.35);
+}
+
+/* Teks redup */
+.muted{
+    color:var(--muted);
+     font-size:13px;
+}
+
+/* Utility layout */
+.stack{
+    display:flex;
+    flex-direction:column;
+    gap: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:space-between; 
+}
+
+/* Tombol utama */
+.btn{
+  appearance:none; 
+  border:none; 
+  background:linear-gradient(180deg, var(--brand-2), var(--ok)); 
+  color:#fff; 
+  font-weight:700; 
+  padding:10px 14px; 
+  border-radius:12px; 
+  cursor:pointer; 
+  box-shadow:0 10px 24px rgba(37,99,235,0.3);
+  transition: 0.25s ease;
+}
+/* Efek hover tombol */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(96,165,250,0.4);
+    opacity: 0.95;
+}
+/* Variasi tombol */
+.btn.secondary{
+  background:transparent; 
+  border:1px solid rgba(255,255,255,.15); 
+  color:var(--txt); 
+  box-shadow:none
+}
+
+.btn.warn{
+    background:linear-gradient(180deg, #806a01, #7d660c);
+}
+
+
+.btn.ok{
+    background:linear-gradient(180deg, var(--ok), var(--brand-2));
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(59,130,246,0.4);
+}
+
+.btn.err{
+    background: linear-gradient(180deg, #562028, #ef4444);
+    color: #fff;
+}
+
+/* Input & textarea */
+.select, select, .text{
+  background:rgba(255,255,255,.04); 
+  border:1px solid rgba(59,130,246,0.2); 
+  color:var(--txt); 
+  padding:10px 12px; 
+  border-radius:12px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.select:focus, .text:focus {
+    border-color: var(--brand-2);
+    box-shadow: 0 0 8px rgba(96,165,250,0.3);
+    outline: none;
+}
+
+textarea.text{
+    width:100%;
+     min-height:120px;
+}
+
+
+/* Tab editor */
+.tabs{
+    display:flex;
+     gap:8px;
+    flex-wrap:wrap;
+}
+
+
+.tab{
+  padding:8px 12px; 
+  border-radius:10px; 
+  border:1px solid rgba(255,255,255,.14); 
+  background:rgba(255,255,255,.03); 
+  cursor:pointer; 
+  font-weight:700; 
+  color:#FFF !important;
+}
+
+
+.tab.active{
+  background:linear-gradient(180deg, rgba(125,211,252,.18), rgba(96,165,250,.18)); 
+  color:#ffd000 !important;
+}
+
+/* Editor dan preview */
+.editor-wrap{
+  position:relative; 
+  border:1px solid rgba(255,255,255,.12); 
+  border-radius:14px; 
+  overflow:hidden; 
+  min-height:280px; 
+  background:#0b1020
+}
+
+.editor{
+  
+  inline-size:100%; 
+  
+  block-size:380px
+}
+
+iframe.preview{
+  inline-size:100%; 
+  block-size:380px; 
+  border:1px solid rgba(255,255,255,.12); 
+  border-radius:14px; 
+  background:white
+}
+
+/* Output log */
+.out{
+  /* font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Cascadia Code", "DejaVu Sans Mono", monospace;  */
+  background:#0a0e1a; 
+  border:1px solid rgba(255,255,255,.12); 
+  border-radius:12px; 
+  padding:10px; 
+  min-height:160px; 
+  overflow:auto; 
+  white-space:pre-wrap
+}
+
+
+/* Footer */
+.footer{
+  opacity:.7;
+   font-size:12px;
+    text-align:center;
+     padding:12px;
+     border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+/* Lencana kecil dan keyboard style */
+.badge{
+  font-size:12px; 
+  padding:4px 8px; 
+  border-radius:10px; 
+  background:rgba(255,255,255,.08); 
+  border:1px solid rgba(255,255,255,.14)
+}
+
+
+.kbd{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Cascadia Code", monospace; 
+  background:#0e1324; 
+  border:1px solid rgba(255,255,255,.15); 
+  border-radius:8px; 
+  padding:2px 6px
+}
+
+/* Label input */
+label{
+    font-size:13px; 
+    color:var(--muted);
+}
